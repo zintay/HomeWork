@@ -19,7 +19,7 @@ for ($i = 23;$i < 78; $i++;){
 
 $array = array();
 for ($i = 0; $i < 1000; $i++) {
-    $array[]=rand(1,100);
+    $array=rand(1,100);
 }
 
 
@@ -27,7 +27,7 @@ for ($i = 0; $i < 1000; $i++) {
 
 $array = array();
 for ($i = 0; $i < 1000; $i++) {
-    $array[]=rand(1,100);
+    $array=rand(1,100);
 }
 
 	
@@ -53,10 +53,30 @@ for ($i = 0; $i < 1000; $i++) {
                         $description("это описание"),
                         $price("это цена"); 
                         ); ?>
-
-
 <div>   
 <h2><?php $title?></h2>
 <p><?php $description?></p>
 <a href=""><?php $price?></a>
 </div>
+<?
+    //    8) При выводе элементов из предыдущего задания покрасьте фон элементов ниже определенной цены в отличный от других цвет.
+    ?>
+    <font color = $title,$description,$price>
+    <?php
+    if($price <= "100"){ 
+        $title,$description,$price = "red";
+    }
+    ?>
+    </font>
+<?php
+    // 9)Создайте масcив из 50 случайных чисел от 0 до 100. Найти все числа меньшие 72 и поместить их в отдельный массив
+    $array = array();
+for ($i = 0; $i < 100; $i++) {
+    $array=rand(1,50);
+}
+
+$array = array();
+foreach ($array as &$value) {
+    $value = $value < 72;
+}
+unset($value); 
